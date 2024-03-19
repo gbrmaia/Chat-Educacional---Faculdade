@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/mainlogin.css" rel="stylesheet" />
+    <script src="./js/login.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="caixa-azul">
+      <h1 class="texto-caixa-azul">
+        O chat do <span class="texto-amarelo-caixa">momento</span>.
+      </h1>
+      <div class="container">
+        <img
+          class="imgchat"
+          src="images/imagemchat.svg"
+          alt="imagem chat celular"
+        />
+      </div>
+    </div>
+    <div id="caixa-35">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">login</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Digite aqui seu e-mail"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            Não iremos compartilhar seu e-mail com ninguém.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">senha</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Digite aqui sua senha"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="container-botoes">
+          <button type="submit" class="btn-primary">acessar</button>
+          <a href="cadastro.html" class="btncadastro">Cadastre-se aqui</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
