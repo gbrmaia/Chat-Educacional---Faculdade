@@ -37,7 +37,8 @@
     ></script>
     <link href="./css/maincadastro.css" rel="stylesheet" />
     <link href="./css/bootstrap-grid.min.css" rel="stylesheet" />
-    <script src="./js/cadastrojs.js"></script>
+    <script src="./js/validacaocadastro.js"></script>
+    <script src="./js/tooltipcadastrojs.js"></script>
     <title>RooKa</title>
   </head>
   <body>
@@ -78,15 +79,17 @@
             >sua senha segura</label
           >
           <span
+            class="hide"
             id="alerti"
             data-bs-toggle="tooltip"
             data-bs-placement="top"
             data-bs-html="true"
-            data-bs-title="Sua senha deve conter:<br> No mínimo 2 números<br> No mínimo 1 letra maiúscula"
+            data-bs-title="A senha deve ter pelo menos:<br> Ter no mínimo 8 caracteres<br> 1 letra minúscula<br> 1 letra maiúscula<br> 1 número<br>"
             ><i class="fa-solid fa-circle-exclamation"></i
           ></span>
           <input
             oninput="startValidationSenha(this)"
+            title="Sua senha deve conter: No mínimo 2 números e no mínimo 1 letra maiúscula"
             type="password"
             class="form-control"
             placeholder="Digite aqui sua senha"
@@ -97,6 +100,15 @@
           <label for="exampleInputPassword1" class="form-label"
             >confirme sua senha</label
           >
+          <span
+            class="hide"
+            id="alerti2"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            data-bs-html="true"
+            data-bs-title="Sua senha deve ser igual em ambos os campos"
+            ><i class="fa-solid fa-circle-exclamation"></i
+          ></span>
           <input
             oninput="startValidationSenhaConfirm(this)"
             type="password"
@@ -106,7 +118,7 @@
           />
         </div>
         <div class="container-botoes">
-          <button type="submit" class="btn-primary">cadastrar</button>
+          <button type="submit" class="btn-primary" id="botaocadastrar">cadastrar</button>
           <a href="login.html" class="btnvoltar">voltar</a>
         </div>
       </form>
