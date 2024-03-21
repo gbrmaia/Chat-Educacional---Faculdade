@@ -122,25 +122,30 @@ input[type="password"]::placeholder {
 }
 
 #emailcadastro.email-invalido {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 #emailcadastro.email-valido {
-    border: 2px solid rgb(13, 255, 0);
+  border: 2px solid rgb(13, 255, 0);
 }
 
 #senhaprimaria.senha-invalido {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 #senhaprimaria.senha-valido {
-    border: 2px solid rgb(13, 255, 0);
+  border: 2px solid rgb(13, 255, 0);
 }
 
 #confirmsenha.senha-invalido {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 #confirmsenha.senha-valido {
-    border: 2px solid rgb(13, 255, 0);
+  border: 2px solid rgb(13, 255, 0);
+}
+
+#alerti{
+  margin-left: 20px;
+  color: #ff9d00;
 }
