@@ -108,6 +108,7 @@ input[type="password"]::placeholder {
   color: #4c6497; /* Altera a cor do texto ao passar o mouse */
 }
 
+
 .btnvoltar {
   color: #14213d;
   display: inline; /* Alterar o display para inline para remover o efeito de bloco */
@@ -122,30 +123,40 @@ input[type="password"]::placeholder {
 }
 
 #emailcadastro.email-invalido {
-  border: 2px solid red;
+  border: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 #emailcadastro.email-valido {
-  border: 2px solid rgb(13, 255, 0);
+  border: 2px solid rgba(13, 255, 0, 0.5);
 }
 
 #senhaprimaria.senha-invalido {
-  border: 2px solid red;
+  border: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 #senhaprimaria.senha-valido {
-  border: 2px solid rgb(13, 255, 0);
+  border: 2px solid rgba(13, 255, 0, 0.5);
 }
 
 #confirmsenha.senha-invalido {
-  border: 2px solid red;
+  border: 2px solid rgba(255, 0, 0, 0.5);
 }
 
 #confirmsenha.senha-valido {
-  border: 2px solid rgb(13, 255, 0);
+  border: 2px solid rgba(13, 255, 0, 0.3);
 }
 
 #alerti{
   margin-left: 20px;
-  color: #ff9d00;
+  color: #ff0000;
 }
+
+#alerti2{
+  margin-left: 20px;
+  color: #ff0000;
+}
+
+.hide {
+  display: none;
+}
+
