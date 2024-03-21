@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  tooltipTriggerList.forEach(function(tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+});
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+$(function(){   
+  $('.btn-text-pop').popover({html:true});        
+  $('.btn-text-too').tooltip();
+});
+
+const exampleEl = document.getElementById('tootltip')
+const tooltip = new bootstrap.Tooltip(exampleEl, options)
+
 let timerId; // Variável para armazenar o ID do timeout
 
 function startValidation(field) {
