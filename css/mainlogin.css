@@ -18,7 +18,7 @@ body {
 .texto-caixa-azul {
   color: #ffffff;
   text-align: center;
-  font-size: 52px;
+  font-size: 4vw; /* Alterado para ser responsivo */
   font-family: "David Libre";
   margin-top: 2%;
 }
@@ -47,21 +47,18 @@ body {
 #caixa-35 {
   font-family: "Cabin";
   background-color: #ffffff;
-  width: 35%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
+  max-width: 400px; /* Define uma largura máxima para manter a legibilidade */
+  height: auto; /* Ajusta a altura automaticamente */
+  position: relative;
+  margin: 10% auto; /* Centraliza a caixa */
+  padding: 20px; /* Adiciona um preenchimento interno */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 input[type="email"],
 input[type="password"] {
-  width: 90%; /* Alterado para ser responsivo */
-  max-width: 400px; /* Adicionado um máximo para manter a legibilidade */
+  width: 100%; /* Ocupa todo o espaço disponível */
   padding: 10px;
   border: 0.5px solid #f0f0f0;
   border-radius: 15px;
@@ -91,16 +88,14 @@ input[type="password"]::placeholder {
 }
 
 .btn-primary {
-  font-size: 25px;
-  padding: 7px 50px;
+  font-size: 4vw; /* Alterado para ser responsivo */
+  padding: 7px 10px; /* Ajustado o preenchimento interno */
   border-radius: 20px;
   background-color: #fca311;
   border: none;
   color: #14213d;
-  display: block;
-  margin: 0 auto;
   margin-top: 7%;
-  transition: background-color 0.5s ease, color 0.5s ease; /* Combinação de transições */
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .btn-primary:hover {
@@ -119,23 +114,4 @@ input[type="password"]::placeholder {
 
 .btncadastro:hover {
   color: #3663c4;
-}
-
-/* Media Queries para tornar o design responsivo */
-
-@media screen and (max-width: 768px) {
-  /* Estilos para telas menores que 768px de largura */
-  #caixa-35 {
-    width: 90%; /* Altera a largura da caixa */
-    max-width: 90%; /* Define uma largura máxima */
-    height: auto; /* Ajusta a altura automaticamente */
-    position: relative; /* Remove a posição fixa */
-    margin: 10% auto; /* Centraliza a caixa */
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: 90%; /* Define a largura para ocupar 90% do espaço disponível */
-    max-width: 90%; /* Define uma largura máxima */
-  }
 }
