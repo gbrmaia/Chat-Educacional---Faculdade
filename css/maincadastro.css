@@ -69,6 +69,10 @@ input[type="password"] {
   background-color: white;
 }
 
+#senhaprimaria{
+  margin-top: -13px;
+}
+
 .form-label {
   padding-left: 3%;
   color: #343434;
@@ -108,6 +112,23 @@ input[type="password"]::placeholder {
   color: #4c6497; /* Altera a cor do texto ao passar o mouse */
 }
 
+#botaocadastrar[disabled]{
+  cursor: not-allowed;
+  opacity: 0.7;
+  transition: opacity 3s ease-in-out;
+  background-color: rgb(98, 98, 98);}
+
+#botaocadastrar[disabled]:hover{
+  opacity: 1; /* Reduz a opacidade do botão */
+  cursor: not-allowed;
+  transition: opacity 3s ease-in-out;
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+#botaocadastrar.disabled-transition {
+  transition: opacity 0.3s ease-in-out;
+}
 
 .btnvoltar {
   color: #14213d;
@@ -158,5 +179,36 @@ input[type="password"]::placeholder {
 
 .hide {
   display: none;
+}
+
+.show-password{
+  width: 400px; /* Define a largura do campo de entrada */
+  padding: 10px; /* Define o preenchimento interno do campo de entrada */
+  border: 0.5px solid #f0f0f0; /* Adiciona uma borda sólida cinza ao redor do campo de entrada */
+  border-radius: 15px; /* Arredonda as bordas do campo de entrada */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao campo de entrada */
+  margin-bottom: 10px; /* Adiciona um espaçamento na parte inferior do campo de entrada */
+  background-color: white;
+}
+
+.show-password::placeholder{
+  color: #c2c2c2;
+}
+
+#toggleSenha{
+  border: none;
+}
+
+#toggleSenha:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+#toggleSenha:hover {
+  /* Remova todos os efeitos de hover definindo as propriedades para seus valores padrão */
+  /* Por exemplo, se você não quiser alterar o estilo do elemento quando ele estiver sendo hoverizado, você pode definir propriedades de estilo como 'initial' ou 'inherit' */
+  background-color: initial;
+  color: inherit;
+  /* Adicione mais propriedades conforme necessário */
 }
 

@@ -87,6 +87,10 @@
             data-bs-title="A senha deve ter pelo menos:<br> Ter no mínimo 8 caracteres<br> 1 letra minúscula<br> 1 letra maiúscula<br> 1 número<br>"
             ><i class="fa-solid fa-circle-exclamation"></i
           ></span>
+          <button class="btn btn-outline-secondary" type="button" id="toggleSenha">
+            <i class="fa-solid fa-eye-slash"></i>
+          </button>
+        </div>
           <input
             oninput="startValidationSenha(this)"
             title="Sua senha deve conter: No mínimo 2 números e no mínimo 1 letra maiúscula"
@@ -95,7 +99,6 @@
             placeholder="Digite aqui sua senha"
             id="senhaprimaria"
           />
-        </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label"
             >confirme sua senha</label
@@ -113,12 +116,13 @@
             oninput="startValidationSenhaConfirm(this)"
             type="password"
             class="form-control"
-            placeholder="Confirme aqui sua senha"
+            placeholder="Confirme aqui sua senhas"
             id="confirmsenha"
           />
+          
         </div>
         <div class="container-botoes">
-          <button type="submit" class="btn-primary" id="botaocadastrar">cadastrar</button>
+          <button type="submit" class="btn-primary" id="botaocadastrar" disabled="true">cadastrar</button>
           <a href="login.html" class="btnvoltar">voltar</a>
         </div>
       </form>
