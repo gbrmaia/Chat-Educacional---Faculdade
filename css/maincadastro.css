@@ -212,3 +212,219 @@ input[type="password"]::placeholder {
   /* Adicione mais propriedades conforme necessário */
 }
 
+@media(max-width: 450px){
+  body {
+    background-color: #d9d9d9;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #caixa-azul {
+    background-color: #14213d; /* Cor de fundo da div */
+    width: 100%;
+    height: 30%; /* Define a altura como 100% da tela */
+    position: fixed; /* Permite fixar a div na tela */
+    top: 0; /* Alinha a div no topo da tela */
+    right: 0; /* Alinha a div no lado direito da tela */
+    box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .texto-caixa-azul {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    font-family: "David Libre";
+    margin-top: 2%;
+  }
+  
+  .texto-amarelo-caixa {
+    color: #fca311;
+  }
+  
+  .container {
+    position: relative;
+    height: calc(100% - 70px); /* Subtrai a altura do rodapé */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-end; /* Alinha no rodapé */
+  }
+  
+  .imgchat {
+    max-width: 75%;
+    max-height: 100%;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    top: 10px;
+  }
+  
+  #caixa-35 {
+    font-family: "Cabin";
+    background-color: #ffffff;
+    width: 100%;
+    height: 70%;
+    position: fixed;
+    top: 200px;
+    left: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 400px; /* Define a largura do campo de entrada */
+    padding: 10px; /* Define o preenchimento interno do campo de entrada */
+    border: 0.5px solid #f0f0f0; /* Adiciona uma borda sólida cinza ao redor do campo de entrada */
+    border-radius: 15px; /* Arredonda as bordas do campo de entrada */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao campo de entrada */
+    margin-bottom: 10px; /* Adiciona um espaçamento na parte inferior do campo de entrada */
+    background-color: white;
+  }
+  
+  #senhaprimaria{
+    margin-top: -13px;
+  }
+  
+  .form-label {
+    padding-left: 3%;
+    color: #343434;
+  }
+  
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder {
+    color: #c2c2c2;
+  }
+  
+  .form-text {
+    padding-left: 3%;
+  }
+  
+  .container-botoes {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+  
+  .btn-primary {
+    font-size: 25px; /* Tamanho da fonte */
+    padding: 7px 50px; /* Preenchimento interno */
+    border-radius: 20px; /* Raio da borda */
+    background-color: #fca311; /* Cor de fundo */
+    border: none; /* Remove a borda */
+    color: #14213d; /* Cor do texto */
+    display: block; /* Para centralizar horizontalmente */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 7%;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff9d00; /* Altera a cor de fundo ao passar o mouse */
+    color: #4c6497; /* Altera a cor do texto ao passar o mouse */
+  }
+  
+  #botaocadastrar[disabled]{
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: opacity 3s ease-in-out;
+    background-color: rgb(98, 98, 98);}
+  
+  #botaocadastrar[disabled]:hover{
+    opacity: 1; /* Reduz a opacidade do botão */
+    cursor: not-allowed;
+    transition: opacity 3s ease-in-out;
+    background-color: rgb(255, 0, 0);
+    color: white;
+  }
+  
+  #botaocadastrar.disabled-transition {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .btnvoltar {
+    color: #14213d;
+    display: inline; /* Alterar o display para inline para remover o efeito de bloco */
+    text-decoration: none; /* Adicionar sublinhado para indicar que é um link */
+    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    transition: color 0.5s ease;
+    margin-top: 3%;
+  }
+  
+  .btnvoltar:hover {
+    color: #3663c4;
+  }
+  
+  #emailcadastro.email-invalido {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+  }
+  
+  #emailcadastro.email-valido {
+    border: 2px solid rgba(13, 255, 0, 0.5);
+  }
+  
+  #senhaprimaria.senha-invalido {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+  }
+  
+  #senhaprimaria.senha-valido {
+    border: 2px solid rgba(13, 255, 0, 0.5);
+  }
+  
+  #confirmsenha.senha-invalido {
+    border: 2px solid rgba(255, 0, 0, 0.5);
+  }
+  
+  #confirmsenha.senha-valido {
+    border: 2px solid rgba(13, 255, 0, 0.3);
+  }
+  
+  #alerti{
+    margin-left: 20px;
+    color: #ff0000;
+  }
+  
+  #alerti2{
+    margin-left: 20px;
+    color: #ff0000;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .show-password{
+    width: 400px; /* Define a largura do campo de entrada */
+    padding: 10px; /* Define o preenchimento interno do campo de entrada */
+    border: 0.5px solid #f0f0f0; /* Adiciona uma borda sólida cinza ao redor do campo de entrada */
+    border-radius: 15px; /* Arredonda as bordas do campo de entrada */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao campo de entrada */
+    margin-bottom: 10px; /* Adiciona um espaçamento na parte inferior do campo de entrada */
+    background-color: white;
+  }
+  
+  .show-password::placeholder{
+    color: #c2c2c2;
+  }
+  
+  #toggleSenha{
+    border: none;
+  }
+  
+  #toggleSenha:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  #toggleSenha:hover {
+    /* Remova todos os efeitos de hover definindo as propriedades para seus valores padrão */
+    /* Por exemplo, se você não quiser alterar o estilo do elemento quando ele estiver sendo hoverizado, você pode definir propriedades de estilo como 'initial' ou 'inherit' */
+    background-color: initial;
+    color: inherit;
+    /* Adicione mais propriedades conforme necessário */
+  }
+}
