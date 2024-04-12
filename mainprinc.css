@@ -1,0 +1,116 @@
+body {
+  background-color: #14213d;
+  height: 2800px;
+  overflow-x: hidden;
+  font-family: "Days One";
+}
+
+.retangulo-branco {
+  position: absolute;
+  top: 100%;
+  width: 100rem;
+  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  max-height: 1920px; /* Define a altura máxima desejada para a imagem */
+}
+
+.barra-amarela {
+  background-color: #fca311;
+  width: 100%;
+  height: 5rem;
+  top: 0; /* Posiciona a barra no topo da janela */
+  left: 0; /* Alinha a barra à esquerda */
+  z-index: 1000; /* Garante que a barra esteja acima de outros elementos */
+}
+
+#navbarSupportedContent {
+  margin-right: 5%;
+}
+
+.nav-item {
+  margin-right: 50px; /* Adicione o espaçamento desejado aqui */
+}
+
+.navbar-brand img {
+  width: 35%; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  padding-right: 5%;
+}
+
+.navbar-brand {
+  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+  display: flex; /* Usar flexbox para alinhar verticalmente */
+  align-items: center; /* Alinhar verticalmente os itens */
+  color: #ffffff;
+}
+
+.navbar-brand:hover {
+  color: #eeeeee;
+}
+
+.navbar-with-background {
+  background-color: #fca311;
+  height: 70px;
+}
+
+.navbar-nav .nav-link {
+  color: white; /* Define a cor do texto para branco */
+  transition: background-color 0.3s, border-radius 0.3s; /* Adiciona uma transição suave para as mudanças de cor e de borda */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.89
+  ); /* Define a cor de fundo ao passar o mouse */
+  border-radius: 50px; /* Adiciona bordas arredondadas */
+}
+
+.navbar-nav .nav-link:focus {
+  background-color: rgba(0, 0, 0, 1); /* Define a cor de fundo ao clicar */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.container {
+  display: flex; /* Utiliza flexbox para alinhar os elementos horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.imagemnoterobo {
+  margin-left: -80px;
+  margin-top: 7%;
+  width: 700px; /* Largura desejada para a imagem */
+  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  max-height: 1280px; /* Altura máxima desejada para a imagem */
+}
+
+.texto {
+  margin-top: 7%;
+  margin-left: 100px; /* Adiciona um espaçamento à esquerda do texto */
+  color: white; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.container2 {
+    display: flex; /* Utiliza flexbox para alinhar os elementos horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+  }
+  
+  .imagemnoterobo2 {
+    width: 700px; /* Largura desejada para a imagem */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    max-height: 1280px; /* Altura máxima desejada para a imagem */
+    z-index: 1000;
+    margin-top: 37%;
+  }
+  
+  .texto2 {
+    margin-left: 5%;
+    margin-top: 37%;
+    margin-right: 100px; /* Adiciona um espaçamento à esquerda do texto */
+    color: #14213d; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    z-index: 1000;
+  }
+  
