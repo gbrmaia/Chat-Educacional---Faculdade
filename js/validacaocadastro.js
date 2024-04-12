@@ -11,7 +11,7 @@ function startValidation(field) {
   // Define um novo timeout para iniciar a validação após um pequeno atraso
   timerId = setTimeout(() => {
     validacaoEmail(field);
-    updateButtonState();
+    reloadBotaoAcessar();
   }, 50); // Atraso de 50 milissegundos
 
   // Verifica se o campo está vazio
@@ -20,7 +20,7 @@ function startValidation(field) {
     field.classList.remove("email-valido");
     field.classList.remove("email-invalido");
     validacaoemail = false;
-  }
+  } 
 }
 
 function startValidationSenha(field) {
@@ -28,7 +28,7 @@ function startValidationSenha(field) {
 
   timerId = setTimeout(() => {
     validacaoSenha(field);
-    updateButtonState();
+    reloadBotaoAcessar();
   }, 50);
 
   if (field.value.trim() === "") {
@@ -44,7 +44,7 @@ function startValidationSenhaConfirm(field) {
 
   timerId = setTimeout(() => {
     validacaoSenhaConfirm(field);
-    updateButtonState();
+    reloadBotaoAcessar();
   }, 50);
 
   if (field.value.trim() === "") {
@@ -58,7 +58,7 @@ function startValidationSenhaConfirm(field) {
 function validacaoEmail(field) {
   const emailValue = field.value.trim(); // Remova espaços em branco no início e no final
   if (emailValue === "") {
-    updateButtonState();
+    reloadBotaoAcessar();
     return ; // Se o campo estiver vazio, não faça nada
   }
 
@@ -85,6 +85,7 @@ function validacaoEmail(field) {
   } else {
     document.getElementById("emailcadastro").innerHTML =
       "<font color='red'>Email inválido </font>";
+      field.classList.remove("email-valido");
     field.classList.add("email-invalido");
     return false;
   }
@@ -99,7 +100,7 @@ function validarSenha(senha) {
 function validacaoSenha(field) {
   const senhaValue = field.value.trim();
   if (senhaValue === "") {
-    updateButtonState();
+    reloadBotaoAcessar();
     return ;
   }
 
@@ -113,7 +114,8 @@ function validacaoSenha(field) {
   } else {
     document.getElementById("senhaprimaria").textContent =
       "A senha deve conter pelo menos 1 letra minúscula, 1 letra maiúscula, 1 número e ter no mínimo 8 caracteres";
-    field.classList.add("senha-invalido");
+      field.classList.remove("senha-valido");
+      field.classList.add("senha-invalido");
     document.getElementById("alerti").classList.remove("hide"); // Remove a classe "hide" para mostrar o ícone
     return false;
   }
@@ -122,7 +124,7 @@ function validacaoSenha(field) {
 function validacaoSenhaConfirm(field) {
   const senhaConfirmValue = field.value.trim();
   if (senhaConfirmValue === "") {
-    updateButtonState();
+    reloadBotaoAcessar();
     return ;
   }
 
@@ -143,29 +145,29 @@ function validacaoSenhaConfirm(field) {
   }
 }
 
-function updateButtonState() {
-  const cadastrarButton = document.getElementById("botaocadastrar");
+function reloadBotaoAcessar() {
+  const cadastrarConst = document.getElementById("botaocadastrar");
 
   if (validacaoemail && validacaosenha && validacaoconfirmsenha === true) {
-    cadastrarButton.classList.remove("disabled"); // Remove a classe "disabled" para habilitar o botão
-    cadastrarButton.removeAttribute("disabled");
-    cadastrarButton.classList.remove("disabled-transition"); 
+    cadastrarConst.classList.remove("disabled"); // Remove a classe "disabled" para habilitar o botão
+    cadastrarConst.removeAttribute("disabled");
+    cadastrarConst.classList.remove("disabled-transition"); 
 
     //código da api de cadastro vai entrar aqui
   } else {
-    cadastrarButton.classList.add("disabled"); // Adiciona a classe "disabled" para desabilitar o botão
-    cadastrarButton.setAttribute("disabled", true)
-    cadastrarButton.classList.add("disabled-transition");; 
+    cadastrarConst.classList.add("disabled"); // Adiciona a classe "disabled" para desabilitar o botão
+    cadastrarConst.setAttribute("disabled", true)
+    cadastrarConst.classList.add("disabled-transition");; 
   }
 
   // Verificar se algum campo está vazio e desabilitar o botão se necessário
-  const emailField = document.getElementById("emailcadastro");
-  const senhaField = document.getElementById("senhaprimaria");
-  const confirmSenhaField = document.getElementById("confirmsenha");
+  const emailCampo = document.getElementById("emailcadastro");
+  const senhaCampo = document.getElementById("senhaprimaria");
+  const confirmSenhaCampo = document.getElementById("confirmsenha");
 
-  if (emailField.value.trim() === "" || senhaField.value.trim() === "" || confirmSenhaField.value.trim() === "") {
-    cadastrarButton.classList.add("disabled");
-    cadastrarButton.setAttribute("disabled", true);
-    cadastrarButton.classList.add("disabled-transition");
+  if (emailCampo.value.trim() === "" || senhaCampo.value.trim() === "" || confirmSenhaCampo.value.trim() === "") {
+    cadastrarConst.classList.add("disabled");
+    cadastrarConst.setAttribute("disabled", true);
+    cadastrarConst.classList.add("disabled-transition");
   }
 }

@@ -29,11 +29,8 @@
       rel="stylesheet"
     />
     <link href="./css/mainlogin.css" rel="stylesheet" />
-    <script src="./js/login.js"></script>
     <title>Document</title>
   </head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <body>
     <div id="caixa-azul">
       <h1 class="texto-caixa-azul">
@@ -55,7 +52,7 @@
             type="email"
             class="form-control"
             placeholder="Digite aqui seu e-mail"
-            id="exampleInputEmail1"
+            id="campoemail"
             aria-describedby="emailHelp"
           />
           <div id="emailHelp" class="form-text">
@@ -68,14 +65,15 @@
             type="password"
             class="form-control"
             placeholder="Digite aqui sua senha"
-            id="exampleInputPassword1"
+            id="camposenha"
           />
         </div>
         <div class="container-botoes">
-          <button type="submit" class="btn-primary">acessar</button>
+          <button id="botaologin" type="submit" class="btn-primary">acessar</button>
           <a href="cadastro.html" class="btncadastro">Cadastre-se aqui</a>
         </div>
       </form>
     </div>
+    <script src="js/login.js"></script>
   </body>
 </html>
