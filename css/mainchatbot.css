@@ -113,7 +113,7 @@ body {
 /* Estilos específicos de mensagens para lado esquerdo e direito */
 .messages .message.left .avatar {
   float: left;
-  background: url(/Chat-Educacional---Faculdade-main/images/undraw_female_avatar_efig.svg);
+  background: url(/images/undraw_female_avatar_efig.svg);
   background-color: #ffffff;
 }
 
@@ -134,7 +134,7 @@ body {
 
 .messages .message.right .avatar {
   float: right;
-  background: url(/Chat-Educacional---Faculdade-main/images/undraw_male_avatar_g98d.svg);
+  background: url(/images/undraw_male_avatar_g98d.svg);
   background-color: #ffffff;
 }
 
